@@ -27,11 +27,11 @@ fun main() {
     println(part2(input))
 }
 
-enum class RatingType {
+private enum class RatingType {
     OXYGEN_GENERATOR, C02SCRUBBER
 }
 
-fun List<String>.getRatingFilteredValue(ratingType: RatingType): String {
+private fun List<String>.getRatingFilteredValue(ratingType: RatingType): String {
     var result = this
     var currentIndex = 0
     while (result.size > 1) {
