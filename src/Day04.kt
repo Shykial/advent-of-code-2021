@@ -1,5 +1,3 @@
-import java.io.File
-
 fun main() {
     fun part1(bingoData: BingoData): Int {
         val (chosenNumbers, boards) = bingoData
@@ -40,7 +38,7 @@ fun main() {
 }
 
 private fun bingoDataFromInput(name: String): BingoData {
-    val inputList = File("src", "$name.txt").readText().split(Regex("""\R{2,}"""))
+    val inputList = readRawInput(name).split(Regex("""\R{2,}"""))
 
     val chosenNumbers = inputList.first().split(',').map(String::toInt)
     val rawBoards = inputList.subList(1, inputList.size)
